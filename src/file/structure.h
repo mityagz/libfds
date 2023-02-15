@@ -17,7 +17,13 @@ extern "C" {
 
 #include <stdint.h>
 #include <stddef.h>
+
+#ifdef __FreeBSD__
+#include <machine/endian.h>
+#else
 #include <endian.h>
+#endif
+
 #include <libfds/file.h>
 
 /* Simplified file structure

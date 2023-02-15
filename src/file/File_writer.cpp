@@ -8,7 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+#ifdef __FreeBSD__
+#include <machine/endian.h>
+#else
 #include <endian.h>
+#endif
 #include <algorithm>
 
 #include <sys/types.h> // lseek

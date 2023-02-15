@@ -42,7 +42,11 @@
 #ifndef _BUILD_CONFIG_
 #define _BUILD_CONFIG_
 
+#ifdef __FreeBSD__
+#include <machine/endian.h>
+#else
 #include <endian.h>
+#endif
 
 /**
  * \internal

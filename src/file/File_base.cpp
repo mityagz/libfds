@@ -10,7 +10,11 @@
 
 #include <cstring>
 #include <cassert>
+#ifdef __FreeBSD__
+#include <machine/endian.h>
+#else
 #include <endian.h>
+#endif
 #include <libfds.h>
 #include <set>
 #include <unistd.h>
