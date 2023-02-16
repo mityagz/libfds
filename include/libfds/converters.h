@@ -54,7 +54,11 @@ extern "C" {
 #include <float.h>     // float min/max
 #include <assert.h>    // static_assert
 #include <arpa/inet.h> // inet_ntop
-#include <endian.h>    // htobe64, be64toh
+#ifdef __FreeBSD__
+#include <machine/endian.h>
+#else
+#include <endian.h>
+#endif
 
 #include "iemgr.h"
 #include <libfds/api.h>
