@@ -45,6 +45,11 @@
 #include <inttypes.h>   // PRIi64, PRIu32,...
 #include <math.h>       // isnormal
 #include "branchlut2.h"
+#ifdef __FreeBSD__
+#include <sys/types.h>
+#include <sys/socket.h>
+#endif
+
 
 int
 fds_set_float_be(void *field, size_t size, double value)

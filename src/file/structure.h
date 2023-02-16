@@ -19,7 +19,7 @@ extern "C" {
 #include <stddef.h>
 
 #ifdef __FreeBSD__
-#include <machine/endian.h>
+#include <sys/endian.h>
 #else
 #include <endian.h>
 #endif

@@ -55,7 +55,7 @@ extern "C" {
 #include <assert.h>    // static_assert
 #include <arpa/inet.h> // inet_ntop
 #ifdef __FreeBSD__
-#include <machine/endian.h>
+#include <sys/endian.h>
 #else
 #include <endian.h>
 #endif
